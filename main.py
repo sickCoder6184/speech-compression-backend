@@ -12,14 +12,18 @@ from pydub import AudioSegment
 
 app = FastAPI()
 
-# CORS setup
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://sickcoder6184.github.io",
+        "https://speech-compression.netlify.app"  # if you use Netlify too
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Paths
 UPLOAD_FOLDER = "uploads/"
