@@ -16,7 +16,6 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://sickcoder6184.github.io",
         "https://speech-compression.netlify.app"
     ],
     allow_credentials=True,
